@@ -21,7 +21,7 @@ async def play_live_stream(client, CallbackQuery, _):
     try:
         chat_id, channel = await get_channeplayCB(_, cplay, CallbackQuery)
     except:
-        return
+        return 
     video = True if mode == "v" else None
     user_name = CallbackQuery.from_user.first_name
     await CallbackQuery.message.delete()
