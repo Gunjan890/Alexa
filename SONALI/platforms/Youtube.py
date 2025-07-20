@@ -1,7 +1,3 @@
-        else:
-            direct = True
-            downloaded_file = await download_song(link)
-        return downloaded_file, direct
 import asyncio
 import os
 import re
