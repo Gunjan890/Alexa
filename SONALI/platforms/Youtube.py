@@ -1,3 +1,7 @@
+        else:
+            direct = True
+            downloaded_file = await download_song(link)
+        return downloaded_file, direct
 import asyncio
 import os
 import re
@@ -34,7 +38,7 @@ async def download_song(link: str):
     for ext in ["mp3", "m4a", "webm"]:
         file_path = f"{download_folder}/{video_id}.{ext}"
         if os.path.exists(file_path):
-            #print(f"File already exists: {file_path}")
+            #print(f"File already bwf: {file_path}")
             return file_path
 
     song_url = f"{API_URL}/song/{video_id}?api={API_KEY}"
