@@ -1,6 +1,6 @@
 from PURVIMUSIC.utils.mongo import db
 
-#from PURVIMUSIC.mongo import *# back...............
+#from PURVIMUSIC.mongo import 1# back...............
 
 notes = db.notes["notes"]
 
