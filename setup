@@ -31,7 +31,7 @@ update() {
 			sudo apt upgrade -y &>/dev/null &&
 			pprint "DONE!\n\n" "cgreen" || (pprint "FAIL.\n\n" "cred"; exit 1)
 		else
-			echo
+			echo 
 		fi
 	else
 		pprint "ALREADY UP TO DATE\n\n" "cgreen"
