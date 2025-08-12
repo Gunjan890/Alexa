@@ -40,7 +40,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     duration_sec = time_to_seconds(dur)
     percentage = (played_sec / duration_sec) * 100
     umm = math.floor(percentage)
-     if 0 < umm <= 10:
+    if 0 < umm <= 10:
         bar = "▰▱▱▱▱▱▱▱▱▱"
     elif 10 < umm < 20:
         bar = "▰▰▱▱▱▱▱▱▱▱"
@@ -60,10 +60,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         bar = "▰▰▰▰▰▰▰▰▰▱"
     else:
         bar = "▰▰▰▰▰▰▰▰▰▰"
-    buttons = [
+        
+        buttons = [
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeInlineKeyboardButtonI", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
