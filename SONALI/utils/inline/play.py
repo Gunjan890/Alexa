@@ -77,10 +77,10 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
       [
             InlineKeyboardButton(
-                text="✰ 𝖡ᴧ፝֠֩ʙꭎ ✰", url="https://t.me/mr_babul0",
+                text="✰ 𝖡ᴧ፝֠֩ʙꭎ ✰", url="https://t.me/II_gunjan_singh_II",
             ),
             InlineKeyboardButton(
-                text="✰ 𝛅ᴏ፝֠֩𝛈ᴧ ✰", url="https://t.me/+buVXCEkFdfBlYTk9",
+                text="✰ 𝛅ᴏ፝֠֩𝛈ᴧ ✰", url="https://t.me/PURVI_UPDATES",
             )
         ],
          [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -103,7 +103,7 @@ def stream_markup(_, videoid, chat_id):
                 text="✰ 𝖡ᴧ፝֠֩ʙꭎ ✰", url="https://t.me/II_gunjan_singh_II",
             ),
             InlineKeyboardButton(
-                text="✰ 𝛅ᴏ፝֠֩𝛈ᴧ ✰", url="https://t.me/+buVXCEkFdfBlYTk9",
+                text="✰ 𝛅ᴏ፝֠֩𝛈ᴧ ✰", url="https://t.me/PURVI_UPDATES",
             )
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
