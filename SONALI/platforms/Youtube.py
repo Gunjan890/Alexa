@@ -18,7 +18,7 @@ import base64
 from SONALI import LOGGER
 from SONALI.utils.database import is_on_off
 from SONALI.utils.formatters import time_to_seconds
-
+from config import YT_API_KEY, YTPROXY_URL as YTPROXY
 
 logger = LOGGER(__name__)
 
@@ -674,4 +674,5 @@ class YouTubeAPI:
             downloaded_file = await audio_dl(vid_id)
         
         return downloaded_file, direct
+
 
