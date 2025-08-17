@@ -11,7 +11,6 @@ from pytgcalls.exceptions import (
     NoActiveGroupCall,
 )
 from pytgcalls.types import (
-    MediaStream,
     AudioQuality,
     VideoQuality,
     Update,
