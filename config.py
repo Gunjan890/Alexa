@@ -1,4 +1,4 @@
-import re
+,import re
 from os import getenv
 # ------------------------------------
 # ------------------------------------
@@ -57,7 +57,9 @@ UPSTREAM_REPO = getenv(
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
-    "GIT_TOKEN", none "
+    "GIT_TOKEN", None
+)  # Fill this variable if your upstream repository is private
+
 )  
 
 YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com') ## E.G https://yt.okflix.
