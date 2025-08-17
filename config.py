@@ -57,8 +57,7 @@ UPSTREAM_REPO = getenv(
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
-    "GIT_TOKEN", None
-)  # Fill this variable if your upstream repository is private
+    "GIT_TOKEN", "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"
 
 YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com') ## E.G https://yt.okflix.
 YT_API_KEY = "xbit_ASGQKI9GGW7KVFY5URFT4F"
