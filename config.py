@@ -27,10 +27,10 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", -1002302005857))
+LOGGER_ID = int(getenv("LOGGER_ID", -100291222585))
 
 # Get this value from @PURVI_HELP_BOT on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 8397071476))
+OWNER_ID = int(getenv("OWNER_ID", 8404724976))
 
 
 # make your bots privacy from telegra.ph and put your url here 
