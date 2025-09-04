@@ -11,6 +11,7 @@ from SONALI.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
 # Import and start keep-alive server
+from keep_alive import keep_alive
 
 
 async def init():
@@ -22,7 +23,7 @@ async def init():
         and not config.STRING5
     ):
         LOGGER(name).error(
-            "ð’ð­ð«ð¢ð§ð  ð’ðžð¬ð¬ð¢ð¨ð§ ðð¨ð­ ð…ð¢ð¥ð¥ðžð, ðð¥ðžðšð¬ðž ð…ð¢ð¥ð¥ ð€ ðð²ð«ð¨ð ð«ðšð¦ V2 ð’ðžð¬ð¬ð¢ð¨ð§ðŸ¤¬"
+            "𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐍𝐨𝐭 𝐅𝐢𝐥𝐥𝐞𝐝, 𝐏𝐥𝐞𝐚𝐬𝐞 𝐅𝐢𝐥𝐥 𝐀 𝐏𝐲𝐫𝐨𝐠𝐫𝐚𝐦 V2 𝐒𝐞𝐬𝐬𝐢𝐨𝐧🤬"
         )
 
     await sudo()
@@ -38,16 +39,17 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("SONALI.plugins" + all_module)
-    LOGGER("SONALI.plugins").info("ð€ð¥ð¥ ð…ðžðšð­ð®ð«ðžð¬ ð‹ð¨ðšððžð ððšð›ð²ðŸ¥³...")
+    LOGGER("SONALI.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
     await userbot.start()
     await RAUSHAN.start()
     await RAUSHAN.decorators()
-    LOGGER("SONALI").info("â•”â•â•â•â•â•à®œÛ©ÛžÛ©à®œâ•â•â•â•â•—\n  â™¨ï¸ð— ð—”ð——ð—˜ ð—•ð—¬ ð—”ð—Ÿð—£ð—›ð—”â™¨ï¸\nâ•šâ•â•â•â•â•à®œÛ©ÛžÛ©à®œâ•â•â•â•â•")
+    LOGGER("SONALI").info("╔═════ஜ۩۞۩ஜ════╗\n  ♨️𝗠𝗔𝗗𝗘 𝗕𝗬 𝗔𝗟𝗣𝗛𝗔♨️\n╚═════ஜ۩۞۩ஜ════╝")
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("SONALI").info("â•”â•â•â•â•â•à®œÛ©ÛžÛ©à®œâ•â•â•â•â•—\n  â™¨ï¸ð— ð—”ð——ð—˜ ð—•ð—¬ ð—”ð—Ÿð—£ð—›ð—”â™¨ï¸\nâ•šâ•â•â•â•â•à®œÛ©ÛžÛ©à®œâ•â•â•â•â•")
+    LOGGER("SONALI").info("╔═════ஜ۩۞۩ஜ════╗\n  ♨️𝗠𝗔𝗗𝗘 𝗕𝗬 𝗔𝗟𝗣𝗛𝗔♨️\n╚═════ஜ۩۞۩ஜ════╝")
 
 
 if __name__ == "__main__":
+    keep_alive()  # Start the web server for Render
     asyncio.get_event_loop().run_until_complete(init())
