@@ -11,7 +11,6 @@ from SONALI.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
 # Import and start keep-alive server
-from keep_alive import keep_alive
 
 
 async def init():
