@@ -1,15 +1,16 @@
 import asyncio
 import importlib
+
 from pyrogram import idle
+from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from SONALI import LOGGER, app, userbot
-from SONALI.core.call import RAUSHAN
+from SONALI.core.call import Sona
 from SONALI.misc import sudo
 from SONALI.plugins import ALL_MODULES
 from SONALI.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
-
 
 
 async def init():
@@ -20,10 +21,8 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER(name).error(
-            "𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐍𝐨𝐭 𝐅𝐢𝐥𝐥𝐞𝐝, 𝐏𝐥𝐞𝐚𝐬𝐞 𝐅𝐢𝐥𝐥 𝐀 𝐏𝐲𝐫𝐨𝐠𝐫𝐚𝐦 V2 𝐒𝐞𝐬𝐬𝐢𝐨𝐧🤬"
-        )
-
+        LOGGER(__name__).error("Assistant client variables not defined, exiting...")
+        exit()
     await sudo()
     try:
         users = await get_gbanned()
@@ -37,15 +36,26 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("SONALI.plugins" + all_module)
-    LOGGER("SONALI.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
+    LOGGER("SONALI.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await RAUSHAN.start()
-    await RAUSHAN.decorators()
-    LOGGER("SONALI").info("╔═════ஜ۩۞۩ஜ════╗\n  ♨️𝗠𝗔𝗗𝗘 𝗕𝗬 𝗔𝗟𝗣𝗛𝗔♨️\n╚═════ஜ۩۞۩ஜ════╝")
+    await Sona.start()
+    try:
+        await Sona.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+    except NoActiveGroupCall:
+        LOGGER("SONALI").error(
+            "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
+        )
+        exit()
+    except:
+        pass
+    await Sona.decorators()
+    LOGGER("SONALI").info(
+        "❖ DROP YOUR GIRLFRIEND'S NUMBER AND SEXY PIC TO @TheSigmaCoder DM || JOIN @PURVI_UPDATES FOR ANY ISSUES || MADE BY PURVI BOTS"
+    )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("SONALI").info("╔═════ஜ۩۞۩ஜ════╗\n  ♨️𝗠𝗔𝗗𝗘 𝗕𝗬 𝗔𝗟𝗣𝗛𝗔♨️\n╚═════ஜ۩۞۩ஜ════╝")
+    LOGGER("SONALI").info("Stopping Music Bot...")
 
 
 if __name__ == "__main__":
