@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from SONALI import LOGGER, app, userbot
-from SONALI.core.call import Sona
+from SONALI.core.call import RAUSHAN
 from SONALI.misc import sudo
 from SONALI.plugins import ALL_MODULES
 from SONALI.utils.database import get_banned_users, get_gbanned
@@ -38,9 +38,9 @@ async def init():
         importlib.import_module("SONALI.plugins" + all_module)
     LOGGER("SONALI.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await Sona.start()
+    await RAUSHAN.start()
     try:
-        await Sona.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await RAUSHAN.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("SONALI").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
@@ -48,7 +48,7 @@ async def init():
         exit()
     except:
         pass
-    await Sona.decorators()
+    await RAUSHAN.decorators()
     LOGGER("SONALI").info(
         "❖ DROP YOUR GIRLFRIEND'S NUMBER AND SEXY PIC TO @TheSigmaCoder DM || JOIN @PURVI_UPDATES FOR ANY ISSUES || MADE BY PURVI BOTS"
     )
